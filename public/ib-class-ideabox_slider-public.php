@@ -103,11 +103,9 @@ class Ib_Ideabox_slider_Public {
 	}
 
 	public function ib_show_slideshow_callback(){
-		
 		ob_start();
 		include_once ( IB_DIR.'public/partials/ib-ideabox_slider-public-display.php');
 		return ob_get_clean();
-	
 	}
 
 }

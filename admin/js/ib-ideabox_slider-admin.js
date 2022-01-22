@@ -107,7 +107,6 @@ $(document).ready(function(){
 	$(document).on('click','.ib-delete-img',function(){
 		var ib_img_id = $(this).parent().data('image_id');
 		var ib_img_key = $(this).data('img_key');
-
 		if(ib_img_id)
 		{
 			var data = {
@@ -175,12 +174,10 @@ $(document).ready(function(){
 					}
 				});
 			}
-
 		}      
 	});
 
 	$(document).on('click','#ib-copy-short',function(){
-
 		$(document).find('.ib-tooltiptext').css({
             "visibility": "visible",
             "opacity": "1"

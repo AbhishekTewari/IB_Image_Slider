@@ -1,5 +1,5 @@
 <?php 
-    $ib_slider_details = get_option('ib_slider_details');
+    $ib_slider_details = get_option('ib_slider_details', array());
 ?>
 <div class="ib-main-admin-panel-wrapper"> 
     <div class="ib-main-heading">
@@ -15,7 +15,7 @@
                 }
                 else
                 {?>      
-                    <input type="button" data-name="<?php echo esc_attr($ib_slider_details['ib_name'])?>" class="ib-button" id="ib-add-more-img" value="<?php esc_html_e('Add More Image',' Ib-ideabox_slider') ?>">
+                    <input type="button" data-name="<?php echo isset($ib_slider_details['ib_name']) ? esc_attr($ib_slider_details['ib_name']) : ""; ?>" class="ib-button" id="ib-add-more-img" value="<?php esc_html_e('Add More Image',' Ib-ideabox_slider') ?>">
                     <div class="ib-shortcode-data">
                         <label class="ib-shortcode-label"><?php esc_html_e('Slider Shortcode :',' Ib-ideabox_slider') ?></label>
                         <input type="text" class="ib-shortcode" value="<?php echo esc_html('[ib_show_slideshow]') ?>" disabled></input>
@@ -24,7 +24,7 @@
                         <label class="ib-short-mess"><?php esc_html_e('Copy Shortcode and paste where you want to display the slider ',' Ib-ideabox_slider') ?></label>
                     </div>
                     <?php
-                }?>  
+                }?> 
         </div>
     </div>
     <div class="ib-img-slid-show">

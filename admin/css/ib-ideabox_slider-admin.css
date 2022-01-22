@@ -3,7 +3,7 @@
  * included in this file.
  */
 
- .ib-main-heading{
+.ib-main-heading{
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 53%, rgba(228,1,55,0.7486344879748774) 100%);
     margin-left: -20px !important;
     padding: 14px !important;
@@ -14,14 +14,14 @@
     font-family: 'futura-pt', sans-serif;
     font-weight: bold;
  }
- .ib-heading-icon-img{
+.ib-heading-icon-img{
     font-size:32px;
  }
- .ib-heading-text{
+.ib-heading-text{
     margin-left:30px;
     font-size:25px;
  }
- .ib-button{
+.ib-button{
    background: linear-gradient(to right, #AA076B 0%, #61045F 51%, #AA076B 100%);
    margin: 10px;
    padding: 13px 20px;
@@ -216,10 +216,10 @@
    color: #fff;
    text-decoration: none;
 }
- .ib-shortcode-label{
-    font-size: 17px;
- }
- .ib-tooltiptext {
+.ib-shortcode-label{
+   font-size: 17px;
+}
+.ib-tooltiptext {
    visibility: hidden;
    width: 120px;
    background-color: black;
