@@ -1,0 +1,86 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IB Image Slider\n"
+"POT-Creation-Date: 2022-01-20 18:20+0530\n"
+"Last-Translator: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: esc_html_e;esc_html__;esc_attr__;esc_attr_e;__;_e\n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/Ib-class-ideabox_slider-admin.php:107
+msgid "Please enter Slider name"
+msgstr ""
+
+#: admin/Ib-class-ideabox_slider-admin.php:108
+msgid "Select at least one image"
+msgstr ""
+
+#: admin/Ib-class-ideabox_slider-admin.php:164
+#: admin/Ib-class-ideabox_slider-admin.php:196
+#: admin/Ib-class-ideabox_slider-admin.php:221
+msgid "Details Updated"
+msgstr ""
+
+#: admin/Ib-class-ideabox_slider-admin.php:168
+#: admin/Ib-class-ideabox_slider-admin.php:199
+#: admin/Ib-class-ideabox_slider-admin.php:224
+msgid "Something Went Wrong"
+msgstr ""
+
+#: admin/partials/Ib-ideabox_slider-admin-display.php:7
+msgid "IB - Ideabox Image Slider"
+msgstr ""
+
+#: admin/partials/Ib-ideabox_slider-admin-display.php:13
+msgid "Add Slider"
+msgstr ""
+
+#: admin/partials/Ib-ideabox_slider-admin-display.php:18
+msgid "Add More Image"
+msgstr ""
+
+#: admin/partials/Ib-ideabox_slider-admin-display.php:21
+msgid "Slider Shortcode :"
+msgstr ""
+
+#: admin/partials/Ib-ideabox_slider-admin-display.php:23
+msgid "copy"
+msgstr ""
+
+#: admin/partials/Ib-ideabox_slider-admin-display.php:24
+msgid "Copied"
+msgstr ""
+
+#: admin/partials/Ib-ideabox_slider-admin-display.php:25
+msgid "Copy Shortcode and paste where you want to display the slider "
+msgstr ""
+
+#: admin/partials/popups/ib_add_new_slide.php:5
+msgid "Add New Slider Detail"
+msgstr ""
+
+#: admin/partials/popups/ib_add_new_slide.php:11
+msgid "Slider Name"
+msgstr ""
+
+#: admin/partials/popups/ib_add_new_slide.php:12
+msgid "Enter Slider Name"
+msgstr ""
+
+#: admin/partials/popups/ib_add_new_slide.php:15
+msgid "Add Images"
+msgstr ""
+
+#: admin/partials/popups/ib_add_new_slide.php:22
+msgid "Save"
+msgstr ""

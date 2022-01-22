@@ -1,0 +1,256 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .ib-main-heading{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 53%, rgba(228,1,55,0.7486344879748774) 100%);
+    margin-left: -20px !important;
+    padding: 14px !important;
+    color: white;
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-family: 'futura-pt', sans-serif;
+    font-weight: bold;
+ }
+ .ib-heading-icon-img{
+    font-size:32px;
+ }
+ .ib-heading-text{
+    margin-left:30px;
+    font-size:25px;
+ }
+ .ib-button{
+   background: linear-gradient(to right, #AA076B 0%, #61045F 51%, #AA076B 100%);
+   margin: 10px;
+   padding: 13px 20px;
+   text-align: center;
+   font-size: 14px;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+   font-weight: 600;
+   border-radius: 10px;
+   display: block;
+   border: none;
+   cursor: pointer;
+   z-index: 1;
+   position: relative;
+ }
+.ib-button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+.ib-main-content-wrapper{
+    margin-left: -20px !important;
+}
+.ib-add-slider-modal {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   overflow: hidden;
+   opacity: 0;
+   transition: opacity .15s linear;
+   transition: opacity .15s linear; 
+   z-index: -1;
+
+}
+.ib-modal-dialog {
+   max-width: 70%;
+   margin: auto;
+   position: relative;
+   width: auto;
+   transition: -webkit-transform .3s ease-out;
+   transition: transform .3s ease-out;
+   transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+   -webkit-transform: translate(0,-25%);
+   transform: translate(0,-50%);
+}
+.ib-modal-content {
+   position: relative;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   width: 100%;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid rgba(0,0,0,.2);
+   border-radius: 0.3rem;
+
+}
+.ib-add-slider-modal.show {
+   opacity: 1;
+   z-index: 1;
+   background-color: rgba(0,0,0,0.4);
+
+}
+.ib-add-slider-modal.show .ib-modal-dialog {
+   transform: translate(0,100px);
+}
+.ib-modal-header{
+   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 53%, rgba(228,1,55,0.7486344879748774) 100%);
+   height: 20px;
+   padding: 10px;
+   font-size: 16px;
+   color: white;
+   font-weight: 600;
+   font-family: 'futura-pt', sans-serif;
+}
+.ib-modal-body
+{
+   padding: 10px;
+}
+.ib-close-modal{
+   cursor: pointer;
+   float:right;
+   clear: left;
+   font-size: 22px;
+}
+.ib-add-images{
+   height: 38px !important;
+   padding: 12px !important;
+   background-image: linear-gradient(to right, #525252 0%, #3d72b4  51%, #525252  100%) !important;
+}
+.ib-slide-images{
+   width: 100px;
+   height: 100px;
+}
+.ib-slide-images img{
+   width: 100%;
+   height: 100%;
+}
+.ib-display-images{
+   display: flex;
+   flex-wrap: wrap;
+}
+.ib-slide-image-show{
+   margin-left: 18px;
+   box-shadow: 3px 3px 6px #d4d4d4;
+}
+.ib-save-slider-setting{
+   display: none;
+}
+.id-image-prev{
+   width: 15%;
+   height: 170px;
+   margin-left: 8px;
+   margin-top :18px;
+   position: relative;
+   padding:5px ;
+}
+.id-image-prev img{
+   width: 100%;
+   height: 100%;
+   box-shadow: 1.9px 3.8px 9.8px hsl(0deg 0% 0% / 35%);
+}
+.id-image-prev-wrapper {
+   display: flex;
+   flex-wrap: wrap;
+}
+.id-preview-slider{
+   display: flex;
+}
+.ib-img-slid-show{
+   width: 95%;
+   margin: 0 auto;
+}
+.ib-delete-img
+{
+   background-color: white;
+   padding: 5px;
+   border-radius: 50%;
+   position: absolute;
+   right: -3px;
+   top: -9px;
+   cursor: pointer;
+}
+.ib-delete-img i{
+   font-size: 16px;
+   color: rgb(143, 69, 69);
+}
+.ib-img-slid-show .ib-slide-img{
+   width: 100% !important;
+   height: 100% !important;
+
+}
+.ib-slider-img-div
+{
+   width: 100% !important;
+   height: 400px !important;
+}
+.ib-shortcode-data
+{
+   margin-left: 10px;
+   margin-bottom: 10px;
+   position: relative;
+}
+.ib-copy-button
+{
+   background: linear-gradient(to right, #AA076B 0%, #61045F 51%, #AA076B 100%);
+   margin: 10px;
+   padding: 13px 20px;
+   text-align: center;
+   font-size: 14px;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+   font-weight: 600;
+   border-radius: 10px;
+   border: none;
+   cursor: pointer;
+   z-index: 1;
+   position: relative;
+}
+.ib-copy-button:hover {
+   background-position: right center; 
+   color: #fff;
+   text-decoration: none;
+}
+ .ib-shortcode-label{
+    font-size: 17px;
+ }
+ .ib-tooltiptext {
+   visibility: hidden;
+   width: 120px;
+   background-color: black;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 8px 0;
+   position: absolute;
+   top: 14px; 
+   opacity: 0;
+   transition: opacity 3s;
+}
+.ib-short-mess{
+   margin-left: 20px;
+}
+
+
+     
+ @media(max-width:768px) {
+   .ib-slider-name{
+      width: 100%;
+   }
+   .id-image-prev{
+      width: 20%;
+   }
+ }
+ @media(max-width:576px) {
+   .id-image-prev{
+      width: 40%;
+   }
+   .ib-tooltiptext{
+      top:71px;
+   }
+ }
