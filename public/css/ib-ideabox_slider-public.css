@@ -20,7 +20,9 @@
 }
 .ib-slider-main-wrapper .slick-dots li button:before {
   font-size:20px;
-  color:rgb(209, 209, 209);
+}
+.ib-slider-main-wrapper .slick-dots li button{
+  background-color: transparent !important;
 }
 
 .ib-slider-carousel .slick-dots
@@ -30,4 +32,7 @@
 }
 .ib-slider-carousel  .slick-prev:before, .ib-slider-carousel  .slick-next:before{
   color: #272424 !important;
+}
+.ib-slider-carousel  .slick-prev, .ib-slider-carousel  .slick-next{
+  background-color: transparent !important;
 }
