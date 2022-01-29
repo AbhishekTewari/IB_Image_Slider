@@ -112,7 +112,6 @@ class Ib_Ideabox_slider_Admin {
 		wp_enqueue_script('ib_block_ui', plugin_dir_url( __FILE__ ) . 'js/ib-block_ui.js', array( 'jquery' ), $this->ib_version, false );
 		wp_enqueue_script('ib_slider_js',plugin_dir_url( __FILE__ ) . 'js/ib-slider_js.js', array( 'jquery' ), $this->ib_version, false  );
 		wp_enqueue_script('ib_coursal', plugin_dir_url( __FILE__ ) . 'js/ib-coursal.js', array( 'jquery' ), $this->ib_version, false );
-		wp_enqueue_script('js_ui_min', plugin_dir_url( __FILE__ ) . 'js/ib-jquery-ui-min.js', array( 'jquery' ), $this->ib_version, false );
 		wp_enqueue_media();
 	}
 
