@@ -29,7 +29,7 @@
     </div>
     <div class="ib-img-slid-show">
         <div class="owl-carousel owl-theme">
-            <?php if(isset($ib_slider_details['ib_img_ids']))
+            <?php if(!empty($ib_slider_details) && isset($ib_slider_details['ib_img_ids']))
             {
                 foreach($ib_slider_details['ib_img_ids'] as $key => $value)
                 {
@@ -41,17 +41,17 @@
         </div>
     </div>
     <div  class="id-image-prev-wrapper">
-        <?php if(isset($ib_slider_details['ib_img_ids']))
+        <?php if(!empty($ib_slider_details) && isset($ib_slider_details['ib_img_ids']))
         {
             foreach($ib_slider_details['ib_img_ids'] as $key => $value)
-                {
-                    ?>    
-                    <div class="id-image-prev" data-image_id="<?php echo esc_attr($value)?>">
-                        <span class="ib-delete-img" data-img_key="<?php echo esc_attr($key)?>"><i class="fas fa-trash-alt"></i></span>
-                        <img class="ib-slide-img"  src="<?php echo esc_url(wp_get_attachment_url( $value))?>">
-                    </div>
-                    <?php
-                } 
+            {
+                ?>    
+                <div class="id-image-prev" data-image_id="<?php echo esc_attr($value)?>">
+                    <span class="ib-delete-img" data-img_key="<?php echo esc_attr($key)?>"><i class="fas fa-trash-alt"></i></span>
+                    <img class="ib-slide-img"  src="<?php echo esc_url(wp_get_attachment_url( $value))?>">
+                </div>
+                <?php
+            } 
         }?>
     </div>    
 </div>

@@ -112,6 +112,8 @@ class Ib_Ideabox_slider_Admin {
 		wp_enqueue_script('ib_block_ui', plugin_dir_url( __FILE__ ) . 'js/ib-block_ui.js', array( 'jquery' ), $this->ib_version, false );
 		wp_enqueue_script('ib_slider_js',plugin_dir_url( __FILE__ ) . 'js/ib-slider_js.js', array( 'jquery' ), $this->ib_version, false  );
 		wp_enqueue_script('ib_coursal', plugin_dir_url( __FILE__ ) . 'js/ib-coursal.js', array( 'jquery' ), $this->ib_version, false );
+		wp_enqueue_script('js_ui_min', plugin_dir_url( __FILE__ ) . 'js/ib-jquery-ui-min.js', array( 'jquery' ), $this->ib_version, false );
+		wp_enqueue_media();
 	}
 
 	public function ib_admin_menu_callback()
@@ -129,7 +131,7 @@ class Ib_Ideabox_slider_Admin {
 	}
 	public function ib_admin_panel_html()
 	{
-		include IB_DIR."admin/partials/ib-ideabox_slider-admin-display.php";
+		require IB_DIR."admin/partials/ib-ideabox_slider-admin-display.php";
 	}
 
 	public function ib_add_slider_details_callback()
@@ -137,7 +139,7 @@ class Ib_Ideabox_slider_Admin {
 		$ib_check_ajax = check_ajax_referer('ib-ajax-security-string', 'ib_security_check' );
 		if ( $ib_check_ajax ) 
 		{
-			$ib_slider_name = sanitize_text_field( $_POST['ib_Slider_name'] );
+			$ib_slider_name = isset($_POST['ib_Slider_name']) ? sanitize_text_field( $_POST['ib_Slider_name']) : "";
 			$ib_image_ids = isset( $_POST['ib_id_array'] ) ? $this->ib_sanitization($_POST['ib_id_array']) : array();
 			$ib_details_arr = get_option('ib_slider_details');
 			if(!empty($ib_image_ids))
@@ -182,7 +184,7 @@ class Ib_Ideabox_slider_Admin {
 
 			if($ib_img_id && $ib_img_key>-1 )
 			{
-				if(!empty($ib_get_details))
+				if(!empty($ib_get_details) && isset($ib_get_details['ib_img_ids']))
 				{
 					if(in_array($ib_img_id,$ib_get_details['ib_img_ids'])) 
 					{
@@ -230,7 +232,6 @@ class Ib_Ideabox_slider_Admin {
 		wp_die();
 	}
 
-
 	public function ib_sanitization($ib_array)
 	{
 		$ib_new = array();
@@ -238,9 +239,7 @@ class Ib_Ideabox_slider_Admin {
 		{
 			$ib_new[] = sanitize_text_field($value);
 		}
-
 		return $ib_new; 
-
 	}
 
 }

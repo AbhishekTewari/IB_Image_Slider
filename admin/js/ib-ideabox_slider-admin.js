@@ -14,16 +14,12 @@ $(document).ready(function(){
 	});
 
 	var file_frame="";
-	var set_to_post_id = "";
 	$(document).on('click','#ib-add-images', function( ){
 		if ( file_frame ) {
-			file_frame.uploader.uploader.param( 'post_id', set_to_post_id );
 			file_frame.open();
 			return;
-		} else {
-			wp.media.model.settings.post.id = set_to_post_id;
-		}
-		file_frame = wp.media.frames.file_frame = wp.media({
+		} 
+		file_frame =  wp.media({
 			title: 'Select Images to upload',
 			button: {
 				text: 'Upload',
@@ -138,7 +134,6 @@ $(document).ready(function(){
 
 	$(document).on('click','#ib-add-more-img', function( ){
 		var ib_sli_name = $(this).data('name');
-		console.log(ib_sli_name);
 		if (ib_sli_name) {
 			$(document).find('.ib-slider-name').val(ib_sli_name);
 			$(document).find('.ib-slider-name').attr("disabled", true);
