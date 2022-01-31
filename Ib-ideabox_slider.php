@@ -65,13 +65,13 @@ register_deactivation_hook( __FILE__, 'ib_deactivate_ideabox_slider' );
 require plugin_dir_path( __FILE__ ) . 'includes/ib-class-ideabox_slider.php';
 
 //Plugin Constant
-if ( !defined( 'IB_DIR' ) ) {
+if ( ! defined( 'IB_DIR' ) ) {
 	define('IB_DIR', plugin_dir_path( __FILE__ ) );
 }
-if ( !defined( 'IB_URL' ) ) {
+if ( ! defined( 'IB_URL' ) ) {
 	define('IB_URL', plugin_dir_url( __FILE__ ) );
 }
-if ( !defined( 'IB_HOME' ) ) {
+if ( ! defined( 'IB_HOME' ) ) {
 	define('IB_HOME', home_url() );
 }
 
@@ -90,4 +90,5 @@ function ib_run_ideabox_slider() {
 	$plugin->ib_run();
 
 }
+
 ib_run_ideabox_slider();

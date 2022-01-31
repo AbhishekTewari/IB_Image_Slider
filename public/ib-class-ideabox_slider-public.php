@@ -51,7 +51,10 @@ class Ib_Ideabox_slider_Public {
 
 		$this->ib_plugin_name = $ib_plugin_name;
 		$this->ib_version = $ib_version;
-		add_shortcode('ib_show_slideshow',array($this , 'ib_show_slideshow_callback'));
+
+		// creating shortcode to display images slider.
+		add_shortcode( 'ib_show_slideshow', array( $this , 'show_slideshow_callback' ) );
+
 	}
 
 	/**
@@ -74,8 +77,12 @@ class Ib_Ideabox_slider_Public {
 		 */
 
 		wp_enqueue_style( $this->ib_plugin_name, plugin_dir_url( __FILE__ ) . 'css/ib-ideabox_slider-public.css', array(), $this->ib_version, 'all' );
-		wp_enqueue_style('ib_slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css');
-		wp_enqueue_style('ib_slick_theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css');
+
+		// css for slick slider //
+		wp_enqueue_style( 'ib_slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css');
+
+		wp_enqueue_style( 'ib_slick_theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css' );
+
 	}
 
 	/**
@@ -98,14 +105,24 @@ class Ib_Ideabox_slider_Public {
 		 */
 
 		wp_enqueue_script( $this->ib_plugin_name, plugin_dir_url( __FILE__ ) . 'js/ib-ideabox_slider-public.js', array( 'jquery' ), $this->ib_version, false );
-		wp_enqueue_script('ib_slick_js',  plugin_dir_url( __FILE__ ) . 'js/ib-slick_js.js', array( 'jquery' ), $this->ib_version, false );
+
+		// jquery for slick slider // 
+		wp_enqueue_script( 'ib_slick_js',  plugin_dir_url( __FILE__ ) . 'js/ib-slick_js.js', array( 'jquery' ), $this->ib_version, false );
 
 	}
 
-	public function ib_show_slideshow_callback(){
+	/**
+	 * Retrieve slider html. 
+	 * @since    1.0.0
+	 */
+	public function show_slideshow_callback(){
 		ob_start();
-		include_once ( IB_DIR.'public/partials/ib-ideabox_slider-public-display.php');
-		return ob_get_clean();
+		
+		// get html of slider to display on page where Admin put shortcode.
+		include_once ( IB_DIR.'public/partials/ib-ideabox_slider-public-display.php' );
+
+		return ob_get_clean();	
+
 	}
 
 }
