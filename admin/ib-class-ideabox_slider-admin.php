@@ -111,14 +111,14 @@ class Ib_Ideabox_slider_Admin {
 		wp_enqueue_script( 'ib_block_ui', plugin_dir_url( __FILE__ ) . 'js/ib-block_ui.js', array( 'jquery' ), $this->ib_version, false );
 
 		/**
-		 * localize array to access array in jquery file.
+		 * localize script to access array in jquery file.
 		 */
-		$ib_ajax_nonce 	= wp_create_nonce( "ib-ajax-security-string" );
-		$ib_translation_array 	= array(
-										'ib_ajaxurl' 	=> esc_url( admin_url( 'admin-ajax.php' ) ),
-										'ib_nonce' 	=> $ib_ajax_nonce,
-										'ib_sli_name_err' 	=> esc_html__( 'Please enter Slider name', 'Ib-ideabox_slider' ),
-										'ib_select_img' 	=> esc_html__( 'Select at least one image', 'Ib-ideabox_slider' ),
+		$ib_ajax_nonce = wp_create_nonce( "ib-ajax-security-string" );
+		$ib_translation_array = array(
+										'ib_ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) ),
+										'ib_nonce' => $ib_ajax_nonce,
+										'ib_sli_name_err' => esc_html__( 'Please enter Slider name', 'Ib-ideabox_slider' ),
+										'ib_select_img' => esc_html__( 'Select at least one image', 'Ib-ideabox_slider' ),
 									);
 		wp_localize_script( $this->ib_plugin_name, 'ib_global_params', $ib_translation_array );
 
@@ -171,9 +171,9 @@ class Ib_Ideabox_slider_Admin {
 
 		if ( $ib_check_ajax )
 		{
-			$ib_slider_name = isset($_POST['ib_Slider_name']) ? sanitize_text_field( $_POST['ib_Slider_name']) : "";
-			$ib_image_ids = isset( $_POST['ib_id_array'] ) ? $this->ib_sanitization($_POST['ib_id_array']) : array();
-			$ib_details_arr = get_option('ib_slider_details');
+			$ib_slider_name = isset( $_POST[ 'ib_Slider_name' ] ) ? sanitize_text_field( $_POST[ 'ib_Slider_name' ] ) : "";
+			$ib_image_ids = isset( $_POST[ 'ib_id_array' ] ) ? $this->ib_sanitization( $_POST[ 'ib_id_array' ] ) : array();
+			$ib_details_arr = get_option( 'ib_slider_details' );
 
 			if( ! empty( $ib_image_ids ) )
 			{
@@ -224,7 +224,7 @@ class Ib_Ideabox_slider_Admin {
 			{
 				if( ! empty( $ib_get_details ) && isset( $ib_get_details[ 'ib_img_ids' ] ) )
 				{
-					if( in_array( $ib_img_id,$ib_get_details[ 'ib_img_ids' ] ) ) 
+					if( in_array( $ib_img_id, $ib_get_details[ 'ib_img_ids' ] ) ) 
 					{
 						unset( $ib_get_details[ 'ib_img_ids' ][ $ib_img_key ] );
 						$ib_update_details = update_option( 'ib_slider_details', $ib_get_details );
@@ -233,10 +233,10 @@ class Ib_Ideabox_slider_Admin {
 			}
 			if( $ib_update_details )
 			{
-				echo json_encode( array( 'ib_status' => true, 'ib_message' => esc_html__( "Details Updated", 'Ib-ideabox_slider' )) );
+				echo json_encode( array( 'ib_status' => true, 'ib_message' => esc_html__( "Details Updated", 'Ib-ideabox_slider' ) ) );
 			}
 			else{
-				echo json_encode( array( 'ib_status' => false, 'ib_message' => esc_html__( "Something Went Wrong", 'Ib-ideabox_slider' )) );
+				echo json_encode( array( 'ib_status' => false, 'ib_message' => esc_html__( "Something Went Wrong", 'Ib-ideabox_slider' ) ) );
 			}
 		}
 		wp_die();
@@ -264,10 +264,10 @@ class Ib_Ideabox_slider_Admin {
 					$ib_update_details = update_option( 'ib_slider_details', $ib_get_details );
 					if( $ib_update_details )
 					{
-						echo json_encode( array( 'ib_status' => true, 'ib_message' => esc_html__( "Details Updated", 'Ib-ideabox_slider' )) );
+						echo json_encode( array( 'ib_status' => true, 'ib_message' => esc_html__( "Details Updated", 'Ib-ideabox_slider' ) ) );
 					}
 					else{
-						echo json_encode( array( 'ib_status' => false, 'ib_message' => esc_html__( "Something Went Wrong", 'Ib-ideabox_slider' )) );
+						echo json_encode( array( 'ib_status' => false, 'ib_message' => esc_html__( "Something Went Wrong", 'Ib-ideabox_slider' ) ) );
 					}
 				} 
 			}

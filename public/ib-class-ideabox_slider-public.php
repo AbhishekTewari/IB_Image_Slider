@@ -79,7 +79,7 @@ class Ib_Ideabox_slider_Public {
 		wp_enqueue_style( $this->ib_plugin_name, plugin_dir_url( __FILE__ ) . 'css/ib-ideabox_slider-public.css', array(), $this->ib_version, 'all' );
 
 		// css for slick slider //
-		wp_enqueue_style( 'ib_slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css');
+		wp_enqueue_style( 'ib_slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css' );
 
 		wp_enqueue_style( 'ib_slick_theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css' );
 
@@ -118,7 +118,7 @@ class Ib_Ideabox_slider_Public {
 	public function show_slideshow_callback(){
 		ob_start();
 		
-		// get html of slider to display on page where Admin put shortcode.
+		// retrieve slider html to display on page where Admin put shortcode.
 		include_once ( IB_DIR.'public/partials/ib-ideabox_slider-public-display.php' );
 
 		return ob_get_clean();	
